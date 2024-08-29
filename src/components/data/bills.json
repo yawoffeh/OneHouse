@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Electricity Bill",
+      "description": "Pay your electricity bill",
+      "image": "/images/electricity.png"
+    },
+    {
+      "id": 2,
+      "name": "Water Bill",
+      "description": "Pay your water bill",
+      "image": "/images/water.png"
+    },
+    {
+      "id": 3,
+      "name": "Internet Bill",
+      "description": "Pay your internet bill",
+      "image": "/images/internet.png"
+    },
+    {
+      "id": 4,
+      "name": "Gas Bill",
+      "description": "Pay your gas bill",
+      "image": "/images/gas.png"
+    }
+  ]
+  
