@@ -1,22 +1,26 @@
 import React from "react";
+import { AiOutlinePayCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { Button } from "./Button";
 
 const BillCard = ({ bill }) => {
+
+    const handlePay = () => {
+        return;
+    }
+
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 mb-4">
-      <img
-        src={bill.image}
-        alt={`${bill.name} icon`}
-        className="h-20 w-20 mb-4 mx-auto"
-      />
-      <h2 className="text-xl font-bold text-gray-800">{bill.name}</h2>
-      <p className="text-gray-600 mb-4">{bill.description}</p>
-      <Link to={`/pay/${bill.id}`}>
-        <button className="bg-[#0D99FF] py-2 px-4 text-white rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none">
-          Pay
-        </button>
-      </Link>
-    </div>
+    <div className='w-[230px] mt-3 mx-3 cursor-pointer bg-white'>
+            <div className='h-[200px]'>
+            <img src={`${bill.image}`} alt="" className='h-full w-full object-fit' />
+            </div>
+            <div className='w-full flex w-full justify-between text-white py-3 px-2 w-full bg-[#3B3B3B]'>
+            <span>{bill.name}</span>
+            <div>
+                <Button placeholder={'Pay'} onClick={handlePay} icon={<AiOutlinePayCircle />}/>
+            </div>
+            </div>
+        </div>
   );
 };
 

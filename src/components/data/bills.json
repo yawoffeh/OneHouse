@@ -3,25 +3,25 @@
       "id": 1,
       "name": "Electricity Bill",
       "description": "Pay your electricity bill",
-      "image": "/images/electricity.png"
+      "image": "https://cdn.ghanaweb.com/imagelib/pics/741/74156804.jpg"
     },
     {
       "id": 2,
       "name": "Water Bill",
       "description": "Pay your water bill",
-      "image": "/images/water.png"
+      "image": "https://www.gwcl.com.gh/wp-content/uploads/2020/05/img_gwcl-removebg-preview.png"
     },
     {
       "id": 3,
       "name": "Internet Bill",
       "description": "Pay your internet bill",
-      "image": "/images/internet.png"
+      "image": "https://i.pinimg.com/474x/98/b9/6c/98b96c47f5a84f35e5a24fcee9852add.jpg"
     },
     {
       "id": 4,
       "name": "Gas Bill",
       "description": "Pay your gas bill",
-      "image": "/images/gas.png"
+      "image": "https://i.pinimg.com/474x/3a/b1/f0/3ab1f094c8de1d330ea5bc480db9dc7c.jpg"
     }
   ]
   
