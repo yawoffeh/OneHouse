@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="navbar bg-[#38A1FF] p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center justify-between w-full sm:w-auto">
-          <img src={logo} alt="OnHouse Logo" className="h-10 w-auto" /> <span className="text-white ml-2 text-2xl font-bold">OneHouse</span>
+          <img src={logo} alt="OnHouse Logo" className="h-10 w-auto" /> 
           <div className="sm:hidden">
             <button
               onClick={toggleMenu}
