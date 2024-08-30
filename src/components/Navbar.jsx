@@ -84,11 +84,27 @@ const Navbar = () => {
           </li>
           <li>
             <button
-              className="bg-[#0D99FF] py-2 px-4 text-white rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none"
-              onClick={toggleMenu}
+              className="bg-[#0D99FF] py-2 px-4 text-white rounded-[10px] shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none"
+              onClick={() => {
+                connect();
+                toggleMenu();
+              }}
+              disabled={walletAddress}
             >
-              Connect Wallet
+              {
+              walletAddress ?
+              <span>{truncateAddress(walletAddress)}</span>
+              :
+              <span>Connect Wallet</span>
+            }
             </button>
+          </li>
+          <li>
+          {
+            walletAddress && <button onClick={disconnect} disabled={!walletAddress} className="bg-white border-blue-400 py-2 px-4 text-[#0D99FF] rounded-[10px] shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none">
+            Disconnect
+          </button>
+          }
           </li>
         </ul>
       </div>

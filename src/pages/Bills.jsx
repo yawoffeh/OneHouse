@@ -11,7 +11,7 @@ const Bills = () => {
       <p className="text-lg text-[#8B8B8B] text-center mb-12">
         Select a bill from the list below to pay securely and conveniently.
       </p>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 flex flex-col justify-center">
         {bills.map((bill) => (
           <BillCard key={bill.id} bill={bill} />
         ))}
