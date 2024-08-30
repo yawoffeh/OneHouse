@@ -1,9 +1,9 @@
 const ViewBill = () => {
-    return (
-        <div>
-            <span></span>
-        </div>
-    )
-}
+  return (
+    <div>
+      <span></span>
+    </div>
+  );
+};
 
 export default ViewBill;
