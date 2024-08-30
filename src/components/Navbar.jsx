@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/onehouselogo.svg";
+import { useWalletContext } from "./contexts/walletContext";
+import { truncateAddress } from "./utils";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const {walletAddress, connect, disconnect} = useWalletContext();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="navbar bg-blue-400 p-4 shadow-md">
+    <nav className="navbar bg-[#38A1FF] p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center justify-between w-full sm:w-auto">
           <img src={logo} alt="OnHouse Logo" className="h-10 w-auto" /> <span className="text-white ml-2 text-2xl font-bold">OneHouse</span>
@@ -36,10 +39,21 @@ const Navbar = () => {
             <Link to="/transactions">Transactions</Link>
           </li>
         </ul>
-        <div className="hidden sm:block">
-          <button className="bg-[#0D99FF] py-2 px-4 text-white rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none">
-            Connect Wallet
+        <div className="hidden sm:block flex gap-3">
+          <button onClick={connect} disabled={walletAddress} className="sm:mx-3 mx-0 bg-[#0D99FF] py-2 px-4 text-white rounded-[10px] shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none">
+            {
+              walletAddress ?
+              <span>{truncateAddress(walletAddress)}</span>
+              :
+              <span>Connect Wallet</span>
+            }
           </button>
+
+          {
+            walletAddress && <button onClick={disconnect} disabled={!walletAddress} className="bg-white border-blue-400 py-2 px-4 text-[#0D99FF] rounded-[10px] shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none">
+            Disconnect
+          </button>
+          }
         </div>
       </div>
 

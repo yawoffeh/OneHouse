@@ -2,10 +2,10 @@ import React from "react";
 
 const OrderSummary = () => {
   return (
-    <div className="flex-grow flex justify-center items-center min-h-screen">
-      <div className="w-full max-w-4xl sm:grid sm:grid-cols-3 gap-6 flex flex-wrap justify-center">
+    <div className="flex-grow flex justify-center items-center min-h-screen bg-blue-100">
+      <div className="w-full max-w-4xl sm:grid sm:grid-cols-3 gap-6 flex flex-wrap justify-center h-full">
         {/* Order Summary */}
-        <div className="col-span-2 bg-white p-6 rounded-lg shadow-lg">
+        <div className="col-span-2 bg-white p-6 rounded-lg shadow-lg h-[60vh]">
           <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
           <div className="flex items-center">
             <img src="" className="rounded-full w-20 h-20 object-cover" />

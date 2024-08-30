@@ -2,10 +2,13 @@ import { Link } from "react-router-dom";
 import hero_img from "../assets/hero_img.svg";
 import BillCard from "../components/BillsCard";
 import bills from "../components/data/bills.json";
-import { MdElectricalServices, MdWallet } from "react-icons/md";
+import { MdElectricalServices, MdPayment, MdWallet } from "react-icons/md";
 import { IoMdCash } from "react-icons/io";
+import { LiaMoneyCheckSolid } from "react-icons/lia";
+import { useWalletContext } from "../components/contexts/walletContext";
 
 const Home = () => {
+  const {walletAddress} = useWalletContext();
   return (
     <div className="bg-[#DCEEFF] min-h-screen sm:pt-0 pt-8">
       {/* Hero Section */}
@@ -21,9 +24,11 @@ const Home = () => {
           <p className="text-[#8B8B8B] text-lg">
             Experience a convenient and secure way to pay your bills and manage your finances—all in one place.
           </p>
-          <button className="bg-[#0D99FF] py-3 px-6 text-white rounded-[10px] shadow-lg hover:bg-[#0B80E0] transition-all duration-300 w-[220px]">
+          {
+            !walletAddress && <button className="bg-[#0D99FF] py-3 px-6 text-white rounded-[10px] shadow-lg hover:bg-[#0B80E0] transition-all duration-300 w-[220px]">
             Connect Wallet
           </button>
+          }
         </div>
         <div className="sm:h-[500px] w-full sm:w-auto">
           <img className="object-cover h-full w-full sm:w-[500px]" src={hero_img} alt="Hero section" />
@@ -38,7 +43,7 @@ const Home = () => {
         <div className="flex justify-evenly">
           <div className="flex flex-col items-center">
             <div className="bg-[#DCEEFF] p-4 rounded-full mb-4">
-              <i className="text-[#0D99FF] text-4xl fas fa-file-invoice-dollar"></i>
+              <MdPayment className="text-3xl" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Pay Utility Bills</h3>
             <p className="text-[#8B8B8B]">
@@ -47,7 +52,7 @@ const Home = () => {
           </div>
           <div className="flex flex-col items-center">
             <div className="bg-[#DCEEFF] p-4 rounded-full mb-4">
-              <i className="text-[#0D99FF] text-4xl fas fa-mobile-alt"></i>
+              <LiaMoneyCheckSolid  className="text-3xl"/>
             </div>
             <h3 className="text-xl font-semibold mb-2">Mobile Top-Up</h3>
             <p className="text-[#8B8B8B]">
