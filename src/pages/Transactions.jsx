@@ -19,7 +19,7 @@ const API_KEY = process.env.REACT_APP_API_KEY_SUBGRAPH
 const url = `https://gateway-testnet-arbitrum.network.thegraph.com/api/${API_KEY}/subgraphs/id/DL6dDczp6U8aN6bEQCtTxeQVwKDTpBBwBqnQSxPnYegR`;
 
 const Transactions = () => {
-  const { getMyTransactions } = useWalletContext();
+  // const { getMyTransactions } = useWalletContext();
 
   // Fetch transactions from the Subgraph
   const { data, status, isLoading, error } = useQuery({
