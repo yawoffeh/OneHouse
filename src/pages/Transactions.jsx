@@ -30,7 +30,6 @@ const Transactions = () => {
   });
 
   useEffect(() => {
-    console.log(API);
     if (error) {
       console.log(error);
       
