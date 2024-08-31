@@ -66,7 +66,9 @@ export const WalletProvider = ({children}) => {
           return tx;
         } catch (error) {
           console.error("Error paying bill:", error);
-          throw error;
+          toast.error("Something went wrong", {
+            position: 'top-center'
+          })
         }
       };
 

@@ -12,11 +12,15 @@ const OrderSummary = () => {
     const {payBill} = useWalletContext();
     const navigate = useNavigate();
 
-    const handlePay = () => {
+    const handlePay = async () => {
       try {
         if (amount) {
           let total = amount;
-          payBill(id, total);
+          await payBill(id, total);
+          toast.success("Bill Paid Succefully", {
+            position: 'top-center'
+          })
+          navigate('/transactions');
         }
         else {
           toast.error("Invalid Amount", {
