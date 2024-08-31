@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# 🏠 OnHouse - Decentralized Bill Payment Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+OnHouse is a decentralized finance app allowing everyday people to pay for utilities by connecting their digital wallets.
 
-## Available Scripts
+## 📂 Project Structure
 
-In the project directory, you can run:
+### 1. Frontend
+The frontend is built with **React** and styled using **Tailwind CSS**. It connects to the Ethereum blockchain using **Ethers.js** and allows users to interact with the smart contract to make payments, view transaction history, and manage their accounts.
 
-### `npm start`
+### 2. Smart Contract
+The smart contract, written in **Solidity**, is deployed on the Ethereum blockchain. It handles the core logic for bill payments, including recording transactions, associating them with specific users, and emitting events for each payment made.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 3. Subgraph
+The subgraph is used to index and query blockchain data. It listens to events emitted by the smart contract and makes the transaction data easily accessible to the frontend. This ensures that users can quickly retrieve and display their payment history.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Getting Started
 
-### `npm test`
+### Prerequisites
+- **Node.js** and **npm** installed
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. **Clone the repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    git clone https://github.com/yourusername/onhouse.git
+    cd onhouse
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install frontend dependencies:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+### Running the Project
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Start the frontend:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **View your app:**
+    Open your browser and navigate to `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔧 Technologies Used
 
-## Learn More
+- **Ethereum**: Blockchain platform for smart contracts.
+- **Solidity**: Language for writing smart contracts.
+- **Ethers.js**: Library for interacting with the Ethereum blockchain.
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **The Graph**: Protocol for querying blockchain data.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 👥 Team
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **[Yaw Offeh Dansoh]**
+- **[Samuel Kofie]**
+- **[Sarah Afua Darko]**
+- **[Audrey Asheley Armah]**
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+💡 *OnHouse* - Making bill payments decentralized and seamless.

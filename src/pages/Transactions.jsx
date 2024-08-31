@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useQuery } from '@tanstack/react-query';
 import { gql, request } from 'graphql-request';
 import { truncateAddress } from "../components/utils";
-import { useWalletContext } from "../components/contexts/walletContext";
+import transactions from "../components/data/transactions.json"
 
 // Subgraph query for transactions
 const query = gql`
@@ -59,7 +59,7 @@ const Transactions = () => {
               </tr>
             </thead>
             <tbody>
-              {data?.paymentMades?.map((transaction) => (
+              {transactions.map((transaction) => (
                 <tr key={transaction?.id} className="border-b">
                   <td className="py-3 px-6">{transaction?.id}</td>
                   <td className="py-3 px-6">Eth {transaction?.amount}</td>

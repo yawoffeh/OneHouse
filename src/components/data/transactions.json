@@ -1,21 +1,21 @@
 [
     {
       "id": "txn_001",
-      "amount": "150.00",
+      "amount": "0.00021",
       "payer": "0x1234abcd5678efgh9012ijkl3456mnop7890qrst",
       "billType": "Electricity",
       "timestamp": "2024-08-29T10:45:00Z"
     },
     {
       "id": "txn_002",
-      "amount": "75.50",
+      "amount": "0.000032",
       "payer": "0x7890qrst1234abcd5678efgh9012ijkl3456mnop",
       "billType": "Water",
       "timestamp": "2024-08-29T12:30:00Z"
     },
     {
       "id": "txn_003",
-      "amount": "200.00",
+      "amount": "0.00004",
       "payer": "0x3456mnop7890qrst1234abcd5678efgh9012ijkl",
       "billType": "Internet",
       "timestamp": "2024-08-28T14:15:00Z"

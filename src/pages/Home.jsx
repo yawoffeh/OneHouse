@@ -21,7 +21,7 @@ const Home = () => {
       <section id="hero" className="flex flex-wrap justify-evenly items-center px-4 py-10">
         <div className="flex flex-col gap-7 justify-center max-w-lg">
           <div className="py-2 px-4 bg-white rounded-[20px] flex justify-center shadow-lg">
-            <span className="text-[#0960A0] font-semibold">Welcome to OnHouse</span>
+            <span className="text-[#0960A0] font-semibold">Welcome to OneHouse</span>
           </div>
 
           <h1 className="capitalize text-[#0D7DCF] font-bold text-4xl leading-snug">
