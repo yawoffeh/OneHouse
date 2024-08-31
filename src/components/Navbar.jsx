@@ -14,10 +14,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar bg-[#38A1FF] p-4 shadow-md">
+    <nav className="fixed w-full top-0 left-0 navbar bg-[#38A1FF] p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center justify-between w-full sm:w-auto">
+          <Link to={'/'}>
           <img src={logo} alt="OnHouse Logo" className="h-10 w-auto" /> 
+          </Link>
           <div className="sm:hidden">
             <button
               onClick={toggleMenu}

@@ -16,7 +16,7 @@ const Home = () => {
     
   })
   return (
-    <div className="bg-[#DCEEFF] min-h-screen sm:pt-0 pt-8">
+    <div className="bg-[#DCEEFF] min-h-screen sm:pt-0 pt-12">
       {/* Hero Section */}
       <section id="hero" className="flex flex-wrap justify-evenly items-center px-4 py-10">
         <div className="flex flex-col gap-7 justify-center max-w-lg">

@@ -2,26 +2,46 @@
     {
       "id": 1,
       "name": "Electricity Bill",
+      "billType": "electricity",
       "description": "Pay your electricity bill",
-      "image": "https://cdn.ghanaweb.com/imagelib/pics/741/74156804.jpg"
+      "image": "https://cdn.ghanaweb.com/imagelib/pics/741/74156804.jpg",
+      "providers": [
+      { "name": "ECQ", "id": 6 },
+      { "name": "FastNet EC", "id": 7 }
+    ]
     },
     {
       "id": 2,
       "name": "Water Bill",
+      "billType": "water",
       "description": "Pay your water bill",
-      "image": "https://www.gwcl.com.gh/wp-content/uploads/2020/05/img_gwcl-removebg-preview.png"
+      "image": "https://www.gwcl.com.gh/wp-content/uploads/2020/05/img_gwcl-removebg-preview.png",
+      "providers": [
+      { "name": "GWAC", "id": 8 },
+      { "name": "Provider B", "id": 9 }
+    ]
     },
     {
       "id": 3,
       "name": "Internet Bill",
+      "billType": "internet",
       "description": "Pay your internet bill",
-      "image": "https://i.pinimg.com/474x/98/b9/6c/98b96c47f5a84f35e5a24fcee9852add.jpg"
+      "image": "https://i.pinimg.com/474x/98/b9/6c/98b96c47f5a84f35e5a24fcee9852add.jpg",
+      "providers": [
+      { "name": "Provider NetOne", "id": 6 },
+      { "name": "Provider FastNet", "id": 7 }
+    ]
     },
     {
       "id": 4,
       "name": "Gas Bill",
+      "billType": "gas",
       "description": "Pay your gas bill",
-      "image": "https://i.pinimg.com/474x/3a/b1/f0/3ab1f094c8de1d330ea5bc480db9dc7c.jpg"
+      "image": "https://i.pinimg.com/474x/3a/b1/f0/3ab1f094c8de1d330ea5bc480db9dc7c.jpg",
+      "providers": [
+      { "name": "Provider GasCo", "id": 8 },
+      { "name": "Provider HeatWave", "id": 9 }
+    ]
     }
   ]
   
