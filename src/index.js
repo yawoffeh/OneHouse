@@ -6,14 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { WalletProvider } from './components/contexts/walletContext';
 import { Toaster } from 'react-hot-toast';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+// Initialize the QueryClient
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <WalletProvider>
-      <App />
-      <Toaster />
-    </WalletProvider>
+    <QueryClientProvider client={queryClient}>
+      <WalletProvider>
+        <App />
+        <Toaster />
+      </WalletProvider>
+    </QueryClientProvider>
   </BrowserRouter>
 );
 
