@@ -6,9 +6,15 @@ import { MdElectricalServices, MdPayment, MdWallet } from "react-icons/md";
 import { IoMdCash } from "react-icons/io";
 import { LiaMoneyCheckSolid } from "react-icons/lia";
 import { useWalletContext } from "../components/contexts/walletContext";
+import { useEffect } from "react";
 
 const Home = () => {
-  const {walletAddress} = useWalletContext();
+  const {walletAddress, connect} = useWalletContext();
+
+  useEffect(() => {
+    console.log(process.env.REACT_APP_contractAddress);
+    
+  })
   return (
     <div className="bg-[#DCEEFF] min-h-screen sm:pt-0 pt-8">
       {/* Hero Section */}
@@ -25,7 +31,7 @@ const Home = () => {
             Experience a convenient and secure way to pay your bills and manage your finances—all in one place.
           </p>
           {
-            !walletAddress && <button className="bg-[#0D99FF] py-3 px-6 text-white rounded-[10px] shadow-lg hover:bg-[#0B80E0] transition-all duration-300 w-[220px]">
+            !walletAddress && <button onClick={connect} className="bg-[#0D99FF] py-3 px-6 text-white rounded-[10px] shadow-lg hover:bg-[#0B80E0] transition-all duration-300 w-[220px]">
             Connect Wallet
           </button>
           }
