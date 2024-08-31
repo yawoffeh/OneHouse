@@ -29,7 +29,8 @@ const ViewBill = () => {
         return;
       }
       else {
-        navigate(`/order-summary?amount=${data?.amount}&type=${billDetails?.id}&provider=${data?.provider}`)
+        let total = Number(data?.amount) * 0.0000005;
+        navigate(`/order-summary?amount=${total}&type=${billDetails?.id}&provider=${data?.provider}`)
       }
     }
 
@@ -61,8 +62,8 @@ const ViewBill = () => {
               <input required onChange={handleInput} name='account_number' type="text" className="bg-[#D5E9F5] mb-3 w-3/4 text-gray-700 px-4 py-1 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" placeholder="Account number" />
             </div>
     
-            <div className="pl-12 m-4">
-              <p className="my-2 text-[#000000] text-lg mb-0 font-semibold">Enter Amount</p>
+            <div className="pl-12 m-4 flex flex-col">
+              <p className="my-2 text-[#000000] text-lg mb-0 font-semibold">Enter Amount</p> <span className='text-sm'>currency $</span>
               <input required onChange={handleInput} name='amount' type="text" className="bg-[#D5E9F5] mb-3 w-3/4 text-gray-700 px-4 py-1 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" placeholder="Enter amount" />
             </div>
     

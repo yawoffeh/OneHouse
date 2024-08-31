@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import transactions from "../components/data/transactions.json";
 import { truncateAddress } from "../components/utils";
+import { useWalletContext } from "../components/contexts/walletContext";
 
 const Transactions = () => {
+  const {getMyTransactions} = useWalletContext()
+
+  useEffect(() => {
+    console.log(getMyTransactions());
+    
+  })
   return (
     <div className="bg-[#F0F8FF] min-h-screen py-12 px-4 sm:px-12">
       <h1 className="text-4xl font-bold text-[#0D7DCF] mb-8">
@@ -23,9 +30,9 @@ const Transactions = () => {
             {transactions.map((transaction) => (
               <tr key={transaction.id} className="border-b">
                 <td className="py-3 px-6">{transaction.id}</td>
-                <td className="py-3 px-6">${transaction.amount}</td>
+                <td className="py-3 px-6">Eth {transaction.amount}</td>
                 <td className="py-3 px-6 truncate">
-                  {truncateAddress(transaction.address)}
+                  {truncateAddress(transaction.payer)}
                 </td>
                 <td className="py-3 px-6">{transaction.billType}</td>
                 <td className="py-3 px-6">{new Date(transaction.timestamp).toLocaleString()}</td>

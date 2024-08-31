@@ -12,7 +12,7 @@ export const WalletProvider = ({children}) => {
     const getContract = async () => {
       connect();
       const provider = new ethers.BrowserProvider(window.ethereum);
-      const signer = walletConnected? walletAddress : await provider.getSigner();
+      const signer = await provider.getSigner();
       const contractAddress = process.env.REACT_APP_contractAddress;
       const contractABI = ABI
 
@@ -86,7 +86,8 @@ export const WalletProvider = ({children}) => {
       const getMyTransactions = async () => {
         try {
           let contract = await getContract();
-          const myTransactions = await contract.getMyTransactions();
+          const myTransactions = await contract.getMyTransactions()
+          
           return myTransactions;
         } catch (error) {
           console.error("Error fetching own transactions:", error);

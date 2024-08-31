@@ -16,7 +16,7 @@ const OrderSummary = () => {
       try {
         if (amount) {
           let total = amount;
-          await payBill(id, total);
+          await payBill(billDetails?.billType, total);
           toast.success("Bill Paid Succefully", {
             position: 'top-center'
           })
