@@ -7,6 +7,7 @@ import MainLayout from './pages/MainLayout';
 import ViewBill from './pages/ViewBill';
 import Bills from './pages/Bills';
 import Transactions from './pages/Transactions';
+import MarketPlace from "./pages/Marketplace";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/bills' element={<Bills />} />
         <Route path='/transactions' element={<Transactions />} />
         <Route path="/order-summary" element={<OrderSummary />} />
+        <Route path="/marketplace" element={<MarketPlace />} />
       </Route>
     </Routes>
   );

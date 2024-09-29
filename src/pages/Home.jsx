@@ -24,9 +24,6 @@ const Home = () => {
             <span className="text-[#0960A0] font-semibold">Welcome to OneHouse</span>
           </div>
 
-          <h1 className="capitalize text-[#0D7DCF] font-bold text-4xl leading-snug">
-            Your Financial<br /> Web Assistant
-          </h1>
           <p className="text-[#8B8B8B] text-lg">
             Experience a convenient and secure way to pay your bills and manage your finances—all in one place.
           </p>
@@ -109,7 +106,7 @@ const Home = () => {
         <h2 className="text-center text-3xl font-semibold text-[#0960A0] mb-8">
           Pay Your Bills with Ease
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 flex flex-col justify-center">
+        <div className="sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-8 flex flex-col justify-center">
           {bills.map((bill) => (
             <BillCard key={bill.id} bill={bill} />
           ))}

@@ -38,10 +38,13 @@ const Navbar = () => {
             <Link to="/bills">Bills</Link>
           </li>
           <li className="hover:text-gray-300 transition duration-300">
+            <Link to="/marketplace">Marketplace</Link>
+          </li>
+          <li className="hover:text-gray-300 transition duration-300">
             <Link to="/transactions">Transactions</Link>
           </li>
         </ul>
-        <div className="hidden sm:block flex gap-3">
+        <div className="hidden sm:flex gap-3">
           <button onClick={connect} disabled={walletAddress} className="sm:mx-3 mx-0 bg-[#0D99FF] py-2 px-4 text-white rounded-[10px] shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none">
             {
               walletAddress ?
