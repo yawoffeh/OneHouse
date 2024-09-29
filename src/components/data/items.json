@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "Toothpaste",
+      "price": 1000000000000000,
+      "stock": 20,
+      "image": "https://i.pinimg.com/474x/12/9e/36/129e36ff60064e5549530d7b3e71bf56.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Dish Soap",
+      "price": 500000000000000,
+      "stock": 50,
+      "image": "https://i.pinimg.com/474x/0b/fe/bc/0bfebc44c40c92b273544d1719bb410c.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Paper Towels",
+      "price": 200000000000000,
+      "stock": 30,
+      "image": "https://i.pinimg.com/474x/04/b7/59/04b75926121b147727fe7e70c2e47646.jpg"
+    },
+    {
+        "id": 1,
+        "name": "Colgate Toothpaste",
+        "price": 5000000000000000,
+        "stock": 20,
+        "image": "https://i.pinimg.com/474x/12/9e/36/129e36ff60064e5549530d7b3e71bf56.jpg"
+    }
+  ]
+  
